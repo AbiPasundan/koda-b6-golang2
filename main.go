@@ -2,42 +2,42 @@ package main
 
 import "fmt"
 
-type we struct {
-	we []string
+type best struct {
+	best string
 }
 type are struct {
-	are string
+	the best
 }
-type the struct {
-	the []string
-}
-type best struct {
-	name string
+type we struct {
+	are are
 }
 
 // task 2 => hello world
 type hello struct {
 	world string
-	// world []string
+}
+
+// task 4 =? apel
+type favorit struct {
+	favorite []int
 }
 
 // task 5
 type first struct {
 	first  []int
 	second []int
-	// world []string
 }
 
 func main() {
-	// 	var we we = we{
-	// 		are: []are{
-	// 			the: []the{
-	// 				best: []best{
-	// 					name: "koda",
-	// 				},
-	// 			},
-	// 		},
-	// 	}
+	// task 1
+	var we we = we{
+		are: are{
+			the: best{
+				best: "Koda",
+			},
+		},
+	}
+	fmt.Println(we.are.the.best)
 
 	// task 2
 	var hello hello = hello{
@@ -47,6 +47,11 @@ func main() {
 		// },
 	}
 	fmt.Println(hello.world)
+
+	// task 4 = favorite[]int{5},
+	my := [1]favorit{}
+
+	fmt.Println(my[0].favorite)
 
 	// task 5
 	var num first = first{
