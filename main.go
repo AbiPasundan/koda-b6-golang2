@@ -15,9 +15,16 @@ type best struct {
 	name string
 }
 
-// hello world
+// task 2 => hello world
 type hello struct {
 	world string
+	// world []string
+}
+
+// task 5
+type first struct {
+	first  []int
+	second []int
 	// world []string
 }
 
@@ -40,5 +47,17 @@ func main() {
 		// },
 	}
 	fmt.Println(hello.world)
+
+	// task 5
+	var num first = first{
+		first: []int{
+			1, 30,
+		},
+		second: []int{
+			1, 2,
+		},
+	}
+
+	fmt.Println(num.first[1] + num.second[1])
 
 }
