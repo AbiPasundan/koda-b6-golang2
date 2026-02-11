@@ -12,24 +12,30 @@ func main() {
 	fmt.Println(scores)
 	container := make([]int, len(scores))
 	copy(container, scores)
-	fmt.Println(container)
+	// fmt.Println(container)
 
 	i := slices.Index(scores, 66)
-	fmt.Println(i)
+	// fmt.Println(i)
 	rawI := scores[:i+1]
 
-	fmt.Println(append(rawI, 88))
+	// fmt.Println(append(rawI, 88))
 	result := append(rawI, 88)
-	fmt.Println(rawI)
+	// fmt.Println(rawI)
 
-	fmt.Println("oihdoshfoehf")
+	// fmt.Println("oihdoshfoehf")
 
 	j := slices.Index(container, 20)
-	fmt.Println(j)
+	// fmt.Println(j)
 	rawJ := container[j:]
-	fmt.Println(rawJ)
+	// fmt.Println(rawJ)
 
-	fmt.Println(append(result, rawJ...))
+	var finalResult []int = append(result, rawJ...)
+
+	fmt.Println(finalResult)
+
+	for v := range finalResult {
+		fmt.Println(finalResult[v])
+	}
 
 	// fmt.Println(scores)
 	// fmt.Println("test")
