@@ -1,4 +1,4 @@
-package lib
+package main
 
 import "fmt"
 
@@ -32,15 +32,33 @@ type obj struct {
 }
 
 // task 4 => apel
-type favorite struct {
-	favourite []fruits
-}
-type fruits struct {
-	fruits []is
-}
 type is struct {
-	is []string
+	is string
 }
+type fruit struct {
+	is string
+}
+
+// di dalam favorite harus ada fruit. ...{ favorite: []favorite{ ...
+type favorite struct {
+	fruit fruit
+}
+
+// didalam my harus ada favorite. var my = []my{ { favorite: []favorite{ ...
+type my struct {
+	favorite []favorite
+}
+
+// type item struct {
+// 	favourite []favourite
+// }
+
+// type fruits struct {
+// 	fruits []is
+// }
+// type is struct {
+// 	is []string
+// }
 
 // task 5
 type first struct {
@@ -48,7 +66,7 @@ type first struct {
 	second []int
 }
 
-func Slice() {
+func main() {
 	// task 1
 	var we we = we{
 		are: are{
@@ -80,6 +98,32 @@ func Slice() {
 
 	// fmt.Println(my[0].favourite)
 	// fmt.Println(my[0].favourite[3].fruits.is)
+
+	// var favorite []favourite
+
+	// var my = [1]slice{
+	// 	favorite: []slice{
+	// 		"ass",
+	// 	},
+	// }
+
+	var my = []my{
+		{
+			favorite: []favorite{
+				{
+					fruit: fruit{
+						is: "Apel",
+					},
+					// is{"check"},
+					// fruit: fruit{
+					// 	is: is{"Apel"},
+					// },
+				},
+			},
+		},
+	}
+
+	fmt.Println(my[0].favorite[0].fruit.is)
 
 	// task 5
 	var num first = first{
