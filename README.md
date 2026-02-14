@@ -21,6 +21,6 @@ Task 5 complete using struct first and calculate variable num
 
 in the second task i copy the initial value `scores := []int{50, 75, 66, 20, 32, 90}`
 
-from both value I take each items and in the first I add num 88
+from both value I take each items and in the first I add num 88 randomly
 
 ![test](./minitask2.mp4)
