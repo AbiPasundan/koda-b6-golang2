@@ -45,7 +45,17 @@ func main() {
 	// fmt.Println(rand.Intn(len(alter)))
 	// fmt.Println(rand.Intn(len(alter)))
 
-	randomResult := slices.Insert(alter, alterIndex, 88)
+	numberAdd := []int{
+		66, 88,
+	}
+
+	// for v := range scores {
+	// 	j := rand.Intn(i + 1)
+	// 	scores[v], scores[j] = scores[j], scores[v]
+	// 	fmt.Println("testing euy", scores)
+	// }
+
+	randomResult := slices.Insert(alter, alterIndex, numberAdd...)
 	fmt.Print("\n Next Result  ", randomResult, "\n")
 
 }
