@@ -13,6 +13,7 @@ Task 2 complete using struct hello
 * task 3
 
 * task 4
+Task 4 compleye
 
 * task 5
 Task 5 complete using struct first and calculate variable num
