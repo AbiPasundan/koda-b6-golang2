@@ -1,4 +1,4 @@
-package main
+package lib
 
 import "fmt"
 
@@ -19,16 +19,32 @@ type hello struct {
 
 // task 3 => Tech Academy
 
-type tech struct {
-	tech string
+// type tech struct {
+// 	tech string
+// }
+
+// type man struct {
+// 	man []tech
+// }
+
+// type obj struct {
+// 	str [][][]man
+// }
+
+type Tech struct {
+	academy string
 }
 
-type man struct {
-	man []tech
+type Man struct {
+	tech Tech
 }
 
-type obj struct {
-	str [][][]man
+type StrItem struct {
+	man []Man
+}
+
+type Object struct {
+	str [][][]StrItem
 }
 
 // task 4 => apel
@@ -66,7 +82,7 @@ type first struct {
 	second []int
 }
 
-func main() {
+func Slice() {
 	// task 1
 	var we we = we{
 		are: are{
@@ -88,6 +104,26 @@ func main() {
 	// 	str [][][]struct
 	// }
 	// fmt.Println(obj)
+
+	targetMan := Man{
+		tech: Tech{
+			academy: "Tech Academy",
+		},
+	}
+
+	strSlice := make([][][]StrItem, 4)
+	strSlice[3] = make([][]StrItem, 2)
+	strSlice[3][1] = make([]StrItem, 3)
+
+	strSlice[3][1][2] = StrItem{
+		man: []Man{targetMan},
+	}
+
+	obj := Object{
+		str: strSlice,
+	}
+
+	fmt.Println(obj.str[3][1][2].man[0].tech.academy)
 
 	// task 4 = favorite[]int{5},
 	// var my []favorite = []favorite{

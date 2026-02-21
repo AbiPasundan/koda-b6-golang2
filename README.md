@@ -11,6 +11,7 @@ Task 1 Complete using struct we are best
 Task 2 complete using struct hello
 
 * task 3
+Task 2 complete using struct 
 
 * task 4
 Task 4 compleye

@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"minitask2/lib"
 	"slices"
 )
 
 func main() {
-	// lib.Slice()
+	lib.Slice()
 	// initial value
 	scores := []int{50, 75, 66, 20, 32, 90}
 	container := make([]int, len(scores))
